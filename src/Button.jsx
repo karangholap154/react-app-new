@@ -1,6 +1,10 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 function Button() {
     const [counter, setCounter] = useState(0);
+    useEffect(() => {
+        console.log("Abc");
+    }, []);
+    console.log("Rerender");
     return (
         <>
         <p>Counter: {counter}</p>
